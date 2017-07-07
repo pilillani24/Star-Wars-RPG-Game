@@ -42,6 +42,7 @@
 		}
 		#p-health-power, #o-health-power {
 			color: #ffd24c;
+			font-size: 20px;
 		}
 		#player-character{
 			padding: 15px 32px;
@@ -55,7 +56,7 @@
 
 		}
 		#fight-section{
-			font-size: 32px;
+			font-size: 24px;
 		}
 		#attack{
 			font-size: 24px;
