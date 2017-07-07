@@ -12,15 +12,10 @@ $(document).ready(function(){
 		var opponentAttack;
 
 		$("#characters div").on("click", function(){
-			//store the id of what has been clicked in the variable yourPlayer
 			var yourPlayer = (this.id);
-			// Add a # to the id string, so it knows what div to find and append that div 
-			// to #player-character div
 			$(("#" + yourPlayer)).appendTo($("#player-character"));
 			player = $("#player-character").children("#" + yourPlayer).text();
-			// console.log(player);
 			var myPlayer = $.trim(player)
-			// console.log(myPlayer);
 			if(myPlayer === "Luke Skywalker"){
 				playerHealthPower = lukeSkywalker;
 				playerAttack = 5;
@@ -36,7 +31,6 @@ $(document).ready(function(){
 			};
 
 			$("#player-character div").off("click");
-			//get the remaining divs and put them in the #enemies-available div
 			for (var i = 0; i < 3; i++){
 				var enemy = ($("#characters div").get(0));
 				$(enemy).appendTo($("#enemies-available"));
@@ -104,10 +98,30 @@ $(document).ready(function(){
 			}
 
 		}
-
-
-// player attack increases by same #
-// opponent attack stays the same
-
+		
+		// function getDefender(){
+		// 	var defender = (this.id);;
+		// 		$(("#" + defender)).appendTo($("#defender"));
+		// 		opponent = $("div").children("#" + defender).text();
+		// 		console.log(opponent);
+		// 		var myOpponent = $.trim(opponent)
+		// 		console.log(myOpponent);
+		// 		if(myOpponent === "Luke Skywalker"){
+		// 			opponentHealthPower = lukeSkywalker;
+		// 			opponentAttack = 5;
+		// 		}else if(myOpponent === "Obi-Wan"){
+		// 			opponentHealthPower = obiWan;
+		// 			opponentAttack = 8;
+		// 		}else if(myOpponent === "Darth Maul"){
+		// 			opponentHealthPower = darthMaul;
+		// 			opponentAttack = 20;
+		// 		}else if(myOpponent === "Darth Sidious"){
+		// 			opponentHealthPower = darthSidious;
+		// 			opponentAttack = 25;
+		// 		}
+		// 	$("#p-health-power").text("Your Health Power: " + playerHealthPower);
+		// 	$("#o-health-power").text(opponent + "Health Power: " + opponentHealthPower);
+		// 	});
+		// }
 
 });
